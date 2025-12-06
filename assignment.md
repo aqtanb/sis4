@@ -1,24 +1,17 @@
 Task description.
-Students are required to implement a simple Android application that retrieves data from any
-publicly available backend API and displays it on the screen. The goal is to demonstrate
-understanding of asynchronous network calls and basic UI state management.
+Students are required to extend their previous Android application (from Assignment 4) by
+implementing offline data caching using a local Room database. The goal is to demonstrate
+understanding of persistent storage, Room architecture components, and offline-first UI
+behavior.
+The application must load data from a public API, save it to Room, and correctly handle
+scenarios where no internet connection is available.
 Requirements:
-● Use Retrofit for making HTTP requests.
-● Log all requests and responses using OkHttp logging interceptor, so that network
-activity is visible in Logcat.
-● Execute network calls with Kotlin Coroutines.
-● Display the loaded data on the screen (for example, a list of items, a single text
-block, or any meaningful representation). The UI design is not critical, but the data
-should be displayed clearly.
-● Handle different UI states:
-○ Show a loading indicator (e.g., ProgressBar) while data is being fetched.
-○ Show an error message if the request fails.
-○ Show the content when the data loads successfully.
-If you use a concept not covered in class (e.g., ViewModel, LiveData, Jetpack
-Compose, etc.) and cannot explain it during review, points will be deducted for each
-unexplained element.
-Each student must answer one theoretical question related to networking or coroutines.
-Possible topics include:
-- Difference between suspend functions and callback-based networking
-- How Dispatchers.IO works
-- Why network calls must not be executed on the main thread
+● Execute network calls as you did in the previous assignment.
+● Save the successfully loaded network data into a Room database (Entity, DAO,
+Database).
+● When the app is opened without internet, the data is loaded from Room, not showing
+a “no internet” error.
+If you use a concept not covered in class and cannot explain it during review, points
+will be deducted for each unexplained element.
+Each student must answer one theoretical question related to SharedPreferences or Room
+(database structure, entities, DAOs, migrations, etc.).
